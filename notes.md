@@ -73,3 +73,9 @@ JavaScript heeft 5 manieren om een variabele aan te maken:
 
 - [State of JS survey](https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/)
 - [TC39 proposals](https://github.com/tc39/proposals), wat er aan zit te komen aan JavaScript-features
+- [Coole Svelte-transitions](https://svelte.dev/tutorial/svelte/in-and-out)
+  ```html
+	<p in:fade  out:fade>
+		Flies in, fades out
+	</p>
+  ```
