@@ -69,6 +69,27 @@ JavaScript heeft 5 manieren om een variabele aan te maken:
 
 `var` gebruikt een lexicale scope, `let`/`const` een block scope. `let`/`const` hebben de voorkeur.
 
+## Datums
+
+`Date` is niet heel chic om mee te werken. Alternatieven:
+
+- [Moment.js](https://www.npmjs.com/package/moment)
+  - al jaren "in maintenance mode", niet op nieuwe projecten nog nieuw installeren
+- [day.js](https://www.npmjs.com/package/dayjs)
+  - [is niet tree-shakeable, gebruikt geen ESM](https://github.com/iamkun/dayjs/issues/1765)
+    - gaat er hier en daar wat onvriendelijk aan toe
+- [luxon](https://www.npmjs.com/package/luxon)
+  - komt niet met TypeScript-types
+- [date-fns](https://www.npmjs.com/package/date-fns)
+  - tree-shakeable, TypeScript, alles! 👍
+- [Temporal](https://github.com/tc39/proposal-temporal)
+  - momenteel stage 3. Maar is al wel bruikbaar via de [polyfill](https://www.npmjs.com/package/temporal-polyfill#tree-shakable-api). "Polyfill": een browser iets laten hebben als hij dat zelf nog niet heeft:
+    ```ts
+    globalThis.Temporal ??= {
+      ...
+    };
+    ```
+
 ## Coole links
 
 - [State of JS survey](https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/)
