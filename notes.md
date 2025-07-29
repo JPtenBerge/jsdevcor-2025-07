@@ -113,6 +113,41 @@ Momenteel nog hype/proposal:
   $('<div>')
   $(function() { }) // document ready
   ```
+  - [Hun `init()` doet gewoon een hoop `if`](https://code.jquery.com/jquery-3.7.1.js):
+    ```js
+    init = jQuery.fn.init = function( selector, context, root ) {
+      // HANDLE: $(""), $(null), $(undefined), $(false)
+      if ( !selector ) {
+        return this;
+      }
+      //...
+      // Handle HTML strings
+      if ( typeof selector === "string" ) {
+        if ( selector[ 0 ] === "<" &&
+          selector[ selector.length - 1 ] === ">" &&
+          selector.length >= 3 ) {
+          // ...
+          // HANDLE: $(#id)
+          } else {
+            elem = document.getElementById( match[ 2 ] );
+          }
+
+        // HANDLE: $(expr, $(...))
+        } else if ( !context || context.jquery ) {
+          return ( context || root ).find( selector );
+        // HANDLE: $(expr, context)
+        } else {
+        // ...
+      // HANDLE: $(DOMElement)
+      } else if ( selector.nodeType ) {
+      // ...
+      // HANDLE: $(function)
+      // Shortcut for document ready
+      } else if ( isFunction( selector ) ) {
+        
+      }
+    };
+    ```
 
 ### Arrow function
 
