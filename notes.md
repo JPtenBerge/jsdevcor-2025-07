@@ -69,6 +69,20 @@ JavaScript heeft 5 manieren om een variabele aan te maken:
 
 `var` gebruikt een lexicale scope, `let`/`const` een block scope. `let`/`const` hebben de voorkeur.
 
+## Wat ooit proposals waren en nu "in JavaScript"
+
+- `Set`
+- `Map`
+- `Promise`s
+- ES Modules
+- ...
+- ...
+
+Momenteel nog hype/proposal:
+- signals
+- observables
+- `Temporal`
+
 ## Datums
 
 `Date` is niet heel chic om mee te werken. Alternatieven:
