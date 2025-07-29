@@ -147,6 +147,6 @@ Wanneer nog WEL een function?
 - [Coole Svelte-transitions](https://svelte.dev/tutorial/svelte/in-and-out)
   ```html
 	<p in:fade  out:fade>
-		Flies in, fades out
+		Fades in, fades out
 	</p>
   ```
