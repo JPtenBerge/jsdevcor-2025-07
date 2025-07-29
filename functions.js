@@ -40,19 +40,6 @@ const arrow = () => {
 // arrow = () => {};
 // arrow();
 
-// arrow vs gewone function
-// - this een stuk voorspelbaar
-// - geen new
-// - geen arguments
-// - geen prototype
-
-// new arrow();
-
-// wanneer nog WEL een function?
-// - hoisting
-// - prototyping - extension methods
-// - lib/framework werkt die heel graag this wil kunnen instellen
-
 function sum(arr) {
 
     sum.bladiebla++;

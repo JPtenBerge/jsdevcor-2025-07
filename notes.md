@@ -104,6 +104,42 @@ Momenteel nog hype/proposal:
     };
     ```
 
+## Functions
+
+- Overloading bestaat niet. Soms lijkt het zo, bijv. bij jQuery:
+  ```js
+  // jQuery
+  $('div span')
+  $('<div>')
+  $(function() { }) // document ready
+  ```
+
+### Arrow function
+
+```js
+const func = (p1 = 42, p2 = 'what') => { };
+```
+
+Arrow function vs gewone function? Zoveel mogelijk arrow functions:
+- `this` is een stuk voorspelbaar
+- geen `new`
+  ```js
+  new arrow();
+  ```
+- geen `arguments`
+- geen prototype
+
+Wanneer nog WEL een function?
+
+- hoisting
+- prototyping - extension methods
+  ```js
+  Date.prototype.toPrettyString = function() {
+    return `${this.getDate()}-${this.getMonth() + 1}-${this.getFullYear()}`;
+  };
+  ```
+- lib/framework werkt die heel graag `this` wil kunnen instellen
+
 ## Coole links
 
 - [State of JS survey](https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/)
