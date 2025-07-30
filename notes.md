@@ -248,6 +248,27 @@ if (x > 400) { ... }
 
 En dan opnieuw alle tests runnen. Geen falende test? mutant overleefd.
 
+## TypeScript
+
+- 2012
+- Microsoft: Anders Helsjberg
+  - heeft ook `dynamic` in C# geintroduceerd
+  - TypeScript compiler => Go
+- veel meer typesafety
+  - geen 100%, maar 95% beter dan zonder
+- browsers snappen TypeScript niet. TypeScript-code moet worden gecompileerd naar JavaScript-code.
+
+```sh
+TS  === transpileren ==> JS
+TS  === compileren ==> JS
+
+C  => assembly  11001011
+C#  => MSIL
+
+tsc.exe
+tst.exe
+```
+
 ## Coole links
 
 - [State of JS survey](https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/)
