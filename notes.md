@@ -184,6 +184,44 @@ Wanneer nog WEL een function?
   - Vue 3 => terugdraaien
   - Angular => steeds minder classes. Zie guards/interceptors
 
+## ES Modules
+
+- delen importeren/exporteren
+- zeer vergelijkbaar met packages in Java, namespace in C#
+
+Initiatieven vanuit de JavaScript-wereld:
+
+- CommonJS
+  - herkenbaar aan `require()`
+    - browserify
+    - Node.js
+      - nog steeds de default. In package.json aan te passen:
+        ```json
+        {
+          // ...
+          "type": "module"
+        }
+        ```
+- AMD (Asynchronous Module Definition)
+  - requirejs
+
+Maar nu eindelijk gestandaardiseerd: ECMAScript Modules
+
+```js
+// bestand1.js
+export class Customer {}
+export const config = {};
+export let someVar = 42;
+
+// bestand2.js
+import { Customer, config } from './bestand.js';
+import { Customer as Cust } from './bestand.js';
+import * as alles from './bestand.js';
+```
+
+- Code in modulebestanden is geisoleerd van andere bestanden
+- Code in modulebestanden wordt in stricte modus geevalueerd
+
 ## Coole links
 
 - [State of JS survey](https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/)
