@@ -1,6 +1,6 @@
 # Geleerd
 
-## Dinsdag
+## Dinsdagochtend over maandag
 
 - Functions:
   - Arrow function:  () => {} - this veel voorspelbaarder. - korter. minder bytes. beter voor schijfruimte.
@@ -101,13 +101,68 @@ window.onload = () => {};
 unittesten: Jest (facebook) karma jasmine mocha chai sinon vitest
 
 
+## Woensdagochtend over dinsdag
+
+Wat oh wat hebben we geleerd van gister?!
+
+- Arrrrrrays
+  - gewoon objecten
+  - .reduce()  prev/curr   sum
+
+
+- 
 
 
 
 
+- Destructuring
+  - object z'n properties meteen in vars stoppen
+  - mixen: objecten in arrays in object
+  - default values wordt ondersteund
+  - let { ding } = obj;
+  - leesbaarheid++   splits[0] splits[1]  wholes decimals  Prettier
+
+- set/get
+  - get haalt info op
+  - set zet informatie
+  - gebruiken we NIET??
+  - C#/Java heftiger op encapsulatie - want backend.
+        public int Bla { get; set; }  Lombok @Getter @Setter  setName() getName()
+
+- Classes
+  - kunnen constructor hebben
+  - PascalCase - beginnen met hoofdletter
+  - static   "gedeeld over alle instanties"
+  - syntactic sugar
+  - voornamelijk Angular    .vue .svelte
+  - class A extends B {}  super() om je base class aan te spreken
+  - "functional abstract"  
+
+	constructor() {
+		if (new.target === JouwClass) {   new JouwClass();
+			return new AndereClass();
+		}
+	}
+
+- Date
+  - ellende
+  - libs: moment date-fns dayjs luxon
+  - nieuwe aankomende standaard proposal: Temporal
+  - getFullYear() getYear() sinds 1900, getDate() enkel dag, getMonth() enum-index + 1
+  - new Date()   is huidige datum/tijd met tijzone die ingesteld is in je browser.
+  - .toString('d-m-Y')  toString() ondersteunt geen parameters
+
+- Functions
+  - optional parameters    function bla({ iets } = {}) {}   bla()
+  - ook dit zijn objecten    function bla() {}   bla.huh = 14;   "aanroepbare objecten"
+
+let obj = {};
+obj['wetryju 🎂🎂😎😂❤😁🤞💋'] = 14;
 
 
-
-
-
-
+- Arrow functions
+  - preferred!
+    - this voorspelbaarder
+    - geen/minder hoisting
+    - vaak gepaard met const
+    - ingekaderd/specialist  geen new  arguments  geen prototype
