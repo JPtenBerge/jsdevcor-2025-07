@@ -30,6 +30,6 @@ export var someLet = 28;
 export const config = {};
 
 
-document.querySelector('button').addEventListener('click', () => {
-    import('./mijn-andere-module.js'); // lazy loading
-});
+// document.querySelector('button').addEventListener('click', () => {
+//     import('./mijn-andere-module.js'); // lazy loading
+// });

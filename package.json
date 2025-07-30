@@ -1,0 +1,23 @@
+{
+  "name": "jsdevcor-2025-07",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/JPtenBerge/jsdevcor-2025-07#readme",
+  "bugs": {
+    "url": "https://github.com/JPtenBerge/jsdevcor-2025-07/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPtenBerge/jsdevcor-2025-07.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "arrays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

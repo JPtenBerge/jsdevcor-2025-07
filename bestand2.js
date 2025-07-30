@@ -1,4 +1,7 @@
 import { Customer } from "./bestand1.js";
+
+// const Customer = require(',/bestand1.js');
+
 // import cust from "./bestand1.js";
 
 // console.log('huh:', huh);
