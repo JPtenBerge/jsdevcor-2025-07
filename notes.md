@@ -219,6 +219,12 @@ import { Customer as Cust } from './bestand.js';
 import * as alles from './bestand.js';
 ```
 
+En nog een bijzondere notatie: [import()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) voor lazy loading
+
+```js
+import('./bla.js');
+```
+
 - Code in modulebestanden is geisoleerd van andere bestanden
 - Code in modulebestanden wordt in stricte modus geevalueerd
 
