@@ -195,7 +195,7 @@ Initiatieven vanuit de JavaScript-wereld:
   - herkenbaar aan `require()`
     - browserify
     - Node.js
-      - nog steeds de default. In package.json aan te passen:
+      - ~~nog steeds de default~~ niet meer de default sinds Node ~22 lijkt het! In package.json aan te passen:
         ```json
         {
           // ...
