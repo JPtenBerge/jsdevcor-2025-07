@@ -228,6 +228,26 @@ import('./bla.js');
 - Code in modulebestanden is geisoleerd van andere bestanden
 - Code in modulebestanden wordt in stricte modus geevalueerd
 
+## Mutation testing
+
+Met [Stryker](https://stryker-mutator.io/)
+
+Met mutation testing wordt productiecode gemuteerd. Dus dit:
+
+```ts
+if (x > 40) { ... }
+```
+
+Wordt aangepast naar mutanten:
+
+```ts
+if (x < 40) { ... }
+if (x == 40) { ... }
+if (x > 400) { ... }
+```
+
+En dan opnieuw alle tests runnen. Geen falende test? mutant overleefd.
+
 ## Coole links
 
 - [State of JS survey](https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/)
