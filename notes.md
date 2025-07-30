@@ -175,6 +175,15 @@ Wanneer nog WEL een function?
   ```
 - lib/framework werkt die heel graag `this` wil kunnen instellen
 
+## Classes
+
+- 2015
+- syntactic sugar
+- werden best veel gebruikt! tot:
+  - React 18 => terugdraaien
+  - Vue 3 => terugdraaien
+  - Angular => steeds minder classes. Zie guards/interceptors
+
 ## Coole links
 
 - [State of JS survey](https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/)
