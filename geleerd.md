@@ -64,14 +64,16 @@ deno run --allow-net --allow-read=c:\temp bla.ts
 - Brendan Eich - Brave
 - ECMA International tc39
 - afronden:
-  - Math.round(123.45) of ~~
-  - getal.toFixed(4)  getal.toString(16)
-  - let a = 81.2356;
+  - `Math.round(123.45)` of `~~`
+  - `getal.toFixed(4)`  `getal.toString(16)`
+  - `let a = 81.2356;`
 
 - how to clone an object
-  - let clone1 = { ...obj }; // shallow copy
-  - let clone2 = JSON.parse(JSON.stringify(obj)); // JSON is karig.
-  - let clone3 = structuredClone(obj);
+  ```js
+  let clone1 = { ...obj }; // shallow copy
+  let clone2 = JSON.parse(JSON.stringify(obj)); // JSON is karig qua datatypes, 0n kan bijv. niet worden geserializeerd.
+  let clone3 = structuredClone(obj);
+  ```
 
 - Scope van variabelen
   - var doet gekke dingen, zo min mogelijk gebruiken
@@ -80,6 +82,7 @@ deno run --allow-net --allow-read=c:\temp bla.ts
     - const is semi-veranderbaar - inhoudelijk
   - globalThis/global/window.mijnVar = 23;
 
+```js
 function test() {
 	x = 24;
 }
@@ -89,31 +92,18 @@ for (var i = 0; i < 5; i++) {
 
 }
 
-
-
-
-window.addEventListener('DOMContentLoaded',  <== defer
-
-window.onload = () => {};
-
-
+window.addEventListener('DOMContentLoaded', () => {}); // <== defer
+window.onload = () => {}; // gaat pas af als HELE pagina geladen is, inclusief CSS, afbeeldingen, videos, advertenties, iframes
+```
 
 unittesten: Jest (facebook) karma jasmine mocha chai sinon vitest
 
 
 ## Woensdagochtend over dinsdag
 
-Wat oh wat hebben we geleerd van gister?!
-
 - Arrrrrrays
   - gewoon objecten
   - .reduce()  prev/curr   sum
-
-
-- 
-
-
-
 
 - Destructuring
   - object z'n properties meteen in vars stoppen
@@ -138,13 +128,14 @@ Wat oh wat hebben we geleerd van gister?!
   - class A extends B {}  super() om je base class aan te spreken
   - "functional abstract"  
 
-	constructor() {
-		if (new.target === JouwClass) {   new JouwClass();
-			return new AndereClass();
-		}
-	}
-
-- Date
+    ```js
+	  constructor() {
+  		if (new.target === JouwClass) {   new JouwClass();
+			  return new AndereClass();
+		  }
+	  }
+    ```
+- `Date`
   - ellende
   - libs: moment date-fns dayjs luxon
   - nieuwe aankomende standaard proposal: Temporal
@@ -155,14 +146,82 @@ Wat oh wat hebben we geleerd van gister?!
 - Functions
   - optional parameters    function bla({ iets } = {}) {}   bla()
   - ook dit zijn objecten    function bla() {}   bla.huh = 14;   "aanroepbare objecten"
-
-let obj = {};
-obj['wetryju 🎂🎂😎😂❤😁🤞💋'] = 14;
-
-
+    ```js
+    let obj = {};
+    obj['wetryju 🎂🎂😎😂❤😁🤞💋'] = 14;
+    ```
 - Arrow functions
   - preferred!
-    - this voorspelbaarder
+    - `this` voorspelbaarder
     - geen/minder hoisting
     - vaak gepaard met const
     - ingekaderd/specialist  geen new  arguments  geen prototype
+
+## Donderdagochtend over woensdag
+
+
+Wat oh wat hebben we geleerd gister?!
+
+- Classes
+  - Heeft een constructor
+  - Het scheiden van verantwoordelijkheden
+  - Syntactic sugar  - je kan ze zien als functies
+
+- ES Modules
+  - import
+    - .js erachter zetten
+  - export
+  - je hoeft niet meer 200 `<script>` in je .html op te nemen
+    - geen kennis van dependencies. volgordelijkheid
+  - `<script type="module">`
+    - import/export werken gewoon allkeen maar als je dit hebt
+  - makkelijk om shizzle op te splitsen
+
+- Landschap
+  - Svelte
+  - Jest
+  - Stryker
+  - Vite
+  - React
+  - Vue
+  - Angular
+  - webpack
+  - date-fns dayjs temporal-polyfill 
+  - async
+  - @apollo
+  - express
+  - next.js/nuxt.js
+  - @angular/ssr
+  - SvelteKit
+  - requirejs
+  - Node / Deno / Bun / amazon - server-side JS
+  - WebGL  WebGPU
+
+- TypeScript
+  - overdragen van code aan anderen
+  - weten wat je kan verwachten
+  - directere foutmeldingen
+  - compilet/transpilet naar JavaScript
+  - ? voor undefined is soms | undefined in tooltip
+  - interface
+  - type
+  - generics! whoo!
+  - heul veul gedownloade package: die ene voor extra types. PartialDeep<T>  type-fest
+
+- Demo Vite
+  - DOM API  document.querySelector()  .innerHTML += ``;
+  - document.createElement('tr')
+document.createElement('td')
+document.createTextNode()  newTr.appendChild(newTextNode)
+
+let template = doucment.querySelector('template').content;
+let clone = template.cloneNode(true);
+clone.querySelector('.name').innerText = 'JP';
+
+```html
+<template>
+	<tr>
+		<td>...
+	</tr>
+</template>
+```
